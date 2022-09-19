@@ -1,0 +1,17 @@
+LOAD DATA CHARACTERSET CL8MSWIN1251
+INFILE "result.csv"
+BADFILE './check_log.BAD'
+DISCARDFILE './check_log.DSC'
+TRUNCATE INTO TABLE XXI.zsk_risk
+Fields terminated by ";"
+-- Optionally enclosed by ';'
+(
+  CINN,
+  CCLIENT_TYPE,
+  IRISK_LEVEL,
+  CMAINRISK,
+  CADDRISK1,
+  CADDRISK2,
+  CADDRISK3,
+  DRISK_DATE DATE "YYYY-MM-DD"
+)

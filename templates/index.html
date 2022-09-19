@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <div classname="test">
+        <form action="/search" method="post">
+        <input autocomplete="off" autofocus name="name" placeholder="Ведите ИНН" type="text">
+    </form></div>
+     <table border="all_ZSK" id="my_tabel">
+   <caption>Данные по ЗСК от ЦБ</caption>
+   <tr>
+    <th>ИНН</th>
+    <th>Тип клиента</th>
+    <th>Уровень риска</th>
+    <th>Главный код риска</th>
+    <th>Первый код риска</th>
+    <th>Второй код риска</th>
+    <th>Третий код риска</th>
+    <th>Дата обновления</th>
+   </tr>
+   {% for company in companies %}
+   <tr><td>{{ company["INN"] }}</td><td>{{ company["Type"] }}</td>
+       <td>{{ company["Risk_level"] }}</td><td>{{ company["Code0"] }}</td>
+       <td>{{ company["Code1"] }}</td><td>{{ company["Code2"] }}</td>
+       <td>{{ company["Code3"] }}</td><td>{{ company["Date"] }}</td></tr>
+   {% endfor %}
+  </table>
+
+<script>
+
+            let input = document.querySelector('input');
+            input.addEventListener('input', async function() {
+                if (parseInt(input.value) >= 0){
+                    let response = await fetch('/search?q=' + input.value);
+                    let companies = await response.json();
+                    let html = '<caption>Данные по ЗСК от ЦБ</caption>';
+                    html +='<tr><th>ИНН</th><th>Тип клиента</th>';
+                    html +='<th>Уровень риска</th><th>Главный код риска</th>';
+                    html +='<th>Первый код риска</th><th>Второй код риска</th>';
+                    html +='<th>Третий код риска</th><th>Дата обновления</th></tr>';
+                    companies.map((company) => {
+                    html += '<tr><td>' + company['INN'] + '</td>' + '<td>' + company['Type'] + '</td>';
+                        html += '<td>' + company['Risk_level'] + '</td>' + '<td>' + company['Code0'] + '</td>';
+                        html += '<td>' + company['Code1'] + '</td>' + '<td>' + company['Code2'] + '</td>';
+                        html += '<td>' + company['Code3'] + '</td>' + '<td>' + company['Date'] + '</td></tr>'})
+                    document.getElementById('my_tabel').innerHTML = html;}
+                else {alert('ВВЕДИТЕ ЧИСЛО!!!')}
+            });
+
+</script>
+
+{% endblock %}
