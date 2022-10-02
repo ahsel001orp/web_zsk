@@ -1,20 +1,27 @@
 <!DOCTYPE html>
-
 <html lang="en">
-    <head>
-        <title>ТАБЛИЦА ЗСК</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    </head>
-    <body>
-        <div class="header_top">
-    <header>
-        <a href="/" >Таблица</a>
-        <a href="/r_load_file" >Загрузить</a>
-        <a href="/out_file" >Выгрузить</a>
-        <a href="/cod_tabel" >Коды</a>
-        <a href="/mail_list" >Список рассылки</a>
-    </header>
-  </div>
-        {% block body %}{% endblock %}
-    </body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ТАБЛИЦА ЗСК</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <script defer src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+  </head>
+  <body>
+    <div class="container py-2">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 bg-secondary border">
+          <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <span class="px-2">RAN</span>
+          </a>
+          <ul class="nav nav-pills">
+            <li class="nav-item px-2"><a href="/" class="btn btn-primary" role="button">Таблица</a></li>
+            <li class="nav-item px-2"><a href="/r_load_file" class="btn btn-primary" role="button">Загрузить</a></li>
+            <li class="nav-item px-2"><a href="/out_file" class="btn btn-primary" role="button">Выгрузить</a></li>
+            <li class="nav-item px-2"><a href="/cod_tabel" class="btn btn-primary" role="button">Коды</a></li>
+            <li class="nav-item px-2"><a href="/mail_list" class="btn btn-primary" role="button">Список рассылки</a></li>
+          </ul>
+        </header>
+      </div>
+      {% block body %}{% endblock %}
+  </body>
 </html>

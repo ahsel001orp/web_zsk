@@ -1,10 +1,11 @@
 {% extends "layout.html" %}
 
 {% block body %}
-
-<form action="/login" method="post">
-        <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
-        <input type="submit" value="Log In">
+<div class="container py-2">
+  <h3 class="text-center">Мы знакомы?<br>Представтесь...</h3>
+<form action="/login" method="post" class="text-center py-2">
+        <input autocomplete="off" autofocus name="name" placeholder="Имя" type="text">
+        <input type="submit" class="btn btn-primary mb-2" value="LOGIN">
 </form>
-
+</div>
 {% endblock %}

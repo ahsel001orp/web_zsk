@@ -1,9 +1,31 @@
 {% extends "layout.html" %}
 
 {% block body %}
-<h1 class="Load_titel">Загрузить файл</h1>
-    <form action="" method=post enctype=multipart/form-data>
-      <p><input type=file name=file>
-         <input type=submit value=Загрузить>
+<h3 class="text-center">Загрузить файл</h3>
+    <form action="" method=post class="text-center py-2" enctype=multipart/form-data>
+      <div class="row g-2 justify-content-center">
+      <div class="col-auto">
+      <input class="form-control" type="file" name="file">
+      </div>
+      <div class="col-auto">
+      <button type="submit" class="btn btn-primary mb-2">
+      <span id="butLoad" class="visually-hidden spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+      Загрузить
+      </div>
+      </div>
+      <div id="visLoad" class="visually-hidden spinner-grow text-success p-5" role="status">
+      <span class="visually-hidden">Загрузка...</span>
+      </div>
     </form>
+
+<!-- <script>
+  function wait_load() {
+      var x = document.getElementById("butLoad");
+      if (x.style.display === "none") {
+          x.style.display = "block";
+      } else {
+          x.style.display = "none";
+      }
+  }
+</script> -->
 {% endblock %}

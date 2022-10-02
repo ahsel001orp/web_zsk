@@ -1,268 +1,271 @@
 ﻿{% extends "layout.html" %}
 
 {% block body %}
-<table border="code_ZSK" id="code_tabel">
-    <caption class="bold">Критерии отнесения клиента к группе риска совершения подозрительных операций</caption>
-   <tr>
-    <th class="head_tabel">Код</th>
-    <th class="head_tabel">Наименование</th>
-    <th class="head_tabel">Тип клиента</th>
+<div class="container py-2">
+<h3 class="text-center">Критерии отнесения клиента к группе риска совершения подозрительных операций</h3>
+<table border="code_ZSK" id="code_tabel" class="table table-striped bg-secondary table-bordered border-info">
+   <tr class="table-primary border-info">
+    <th class="text-center"><h4>Код</h4></th>
+    <th class="text-center"><h4>Наименование</h4></th>
+    <th class="text-center"><h4>Тип клиента</h4></th>
    </tr>
-    <tr>
+    <tr class="table-warning border-info">
     <th>1</th>
-    <th>Подозрительные операции, направленные на получение наличных денежных средств<br>
+    <th class="text-center">Подозрительные операции, направленные на получение наличных денежных средств<br>
         (прямое обналичивание)</th>
     <th>ЮЛ, ИП</th>
    </tr>
    <tr>
-    <th class="low_tabel">1.01</th>
-    <th class="low_tabel">Снятие через кассу кредитной организации</th>
-    <th class="low_tabel">↑</th>
+    <th >1.01</th>
+    <th class="text-center">Снятие через кассу кредитной организации</th>
+    <th >↑</th>
    </tr>
     <tr>
-    <th class="low_tabel">1.02</th>
-    <th class="low_tabel">Корпоративные карты</th>
-    <th class="low_tabel">↑</th>
+    <th >1.02</th>
+    <th class="text-center">Корпоративные карты</th>
+    <th >↑</th>
    </tr>
     <tr>
-    <th class="low_tabel">1.99</th>
-    <th class="low_tabel">Иные основания</th>
-    <th class="low_tabel">↑</th>
+    <th >1.99</th>
+    <th class="text-center">Иные основания</th>
+    <th >↑</th>
    </tr>
-    <tr>
+    <tr class="table-warning border-info">
     <th>2</th>
-    <th>Подозрительные операции, направленные на вывод денежных средств за рубеж</th>
+    <th class="text-center">Подозрительные операции, направленные на вывод денежных средств за рубеж</th>
     <th>ЮЛ, ИП</th>
    </tr>
    <tr>
-    <th class="low_tabel">2.01</th>
-    <th class="low_tabel">Расчеты за товары</th>
-    <th class="low_tabel">↑</th>
+    <th >2.01</th>
+    <th class="text-center">Расчеты за товары</th>
+    <th >↑</th>
    </tr>
    <tr>
-    <th class="low_tabel">2.02</th>
-    <th class="low_tabel">Расчеты за работы, услуги</th>
-    <th class="low_tabel">↑</th>
+    <th >2.02</th>
+    <th class="text-center">Расчеты за работы, услуги</th>
+    <th >↑</th>
    </tr>
    <tr>
-    <th class="low_tabel">2.03</th>
-    <th class="low_tabel">Расчеты за ценные бумаги, векселя резидентов, не являющихся<br>
+    <th >2.03</th>
+    <th class="text-center">Расчеты за ценные бумаги, векселя резидентов, не являющихся<br>
     профессиональными участниками рынка ценных бума (ПУРЦБ)</th>
-    <th class="low_tabel">↑</th>
+    <th >↑</th>
    </tr>
    <tr>
-    <th class="low_tabel">2.04</th>
-    <th class="low_tabel">Расчеты за недвижимое имущество</th>
-    <th class="low_tabel">↑</th>
+    <th >2.04</th>
+    <th class="text-center">Расчеты за недвижимое имущество</th>
+    <th >↑</th>
    </tr>
    <tr>
-    <th class="low_tabel">2.05</th>
-    <th class="low_tabel">ПУРЦБ</th>
-    <th class="low_tabel">↑</th>
+    <th >2.05</th>
+    <th class="text-center">ПУРЦБ</th>
+    <th >↑</th>
    </tr>
    <tr>
-    <th class="low_tabel">2.06</th>
-    <th class="low_tabel">Судебные решения</th>
-    <th class="low_tabel">↑</th>
+    <th >2.06</th>
+    <th class="text-center">Судебные решения</th>
+    <th >↑</th>
    </tr>
    <tr>
-    <th class="low_tabel">2.07</th>
-    <th class="low_tabel">Корпоративные карты</th>
-    <th class="low_tabel">↑</th>
+    <th >2.07</th>
+    <th class="text-center">Корпоративные карты</th>
+    <th >↑</th>
    </tr>
    <tr>
-    <th class="low_tabel">2.08</th>
-    <th class="low_tabel">Без постановки внешнеторгового контракта (договора) на учет в уполномоченном<br>
+    <th >2.08</th>
+    <th class="text-center">Без постановки внешнеторгового контракта (договора) на учет в уполномоченном<br>
     банке в соответствии с требованием нормативных актов Банка России</th>
-    <th class="low_tabel">↑</th>
+    <th >↑</th>
    </tr>
    <tr>
-    <th class="low_tabel">2.99</th>
-    <th class="low_tabel">Иные основания</th>
-    <th class="low_tabel">↑</th>
+    <th >2.99</th>
+    <th class="text-center">Иные основания</th>
+    <th >↑</th>
    </tr>
-   <tr>
+   <tr class="table-warning border-info">
     <th>3</th>
-    <th>Подозрительные транзитные операции высокого риска (ПТОВР),<br>
+    <th class="text-center">Подозрительные транзитные операции высокого риска (ПТОВР),<br>
     направленные на получение наличных денежных средств (обналичивание)</th>
     <th>ЮЛ</th>
    </tr>
    <tr>
-    <th class="low_tabel">3.01</th>
-    <th class="low_tabel">ПТОВР обналичивание. Схема ЮЛ-ФЛ</th>
-    <th class="low_tabel">↑</th>
+    <th >3.01</th>
+    <th class="text-center">ПТОВР обналичивание. Схема ЮЛ-ФЛ</th>
+    <th >↑</th>
    </tr>
    <tr>
-    <th class="low_tabel">3.02</th>
-    <th class="low_tabel">ПТОВР обналичивание. Схема ЮЛ-ИП</th>
-    <th class="low_tabel">↑</th>
+    <th >3.02</th>
+    <th class="text-center">ПТОВР обналичивание. Схема ЮЛ-ИП</th>
+    <th >↑</th>
    </tr>
    <tr>
-    <th class="low_tabel">3.03</th>
-    <th class="low_tabel">ПТОВР обналичивание. Вексельные схемы</th>
-    <th class="low_tabel">↑</th>
+    <th >3.03</th>
+    <th class="text-center">ПТОВР обналичивание. Вексельные схемы</th>
+    <th >↑</th>
    </tr>
    <tr>
-    <th class="low_tabel">3.04</th>
-    <th class="low_tabel">ПТОВР обналичивание. ПУРЦБ</th>
-    <th class="low_tabel">↑</th>
+    <th >3.04</th>
+    <th class="text-center">ПТОВР обналичивание. ПУРЦБ</th>
+    <th >↑</th>
    </tr>
    <tr>
-    <th class="low_tabel">3.05</th>
-    <th class="low_tabel">ПТОВР обналичивание. Исполнительные документы</th>
-    <th class="low_tabel">↑</th>
+    <th >3.05</th>
+    <th class="text-center">ПТОВР обналичивание. Исполнительные документы</th>
+    <th >↑</th>
    </tr>
    <tr>
-    <th class="low_tabel">3.06</th>
-    <th class="low_tabel">ПТОВР обналичивание. Корпоративные карты</th>
-    <th class="low_tabel">↑</th>
+    <th >3.06</th>
+    <th class="text-center">ПТОВР обналичивание. Корпоративные карты</th>
+    <th >↑</th>
    </tr>
    <tr>
-    <th class="low_tabel">3.99</th>
-    <th class="low_tabel">ПТОВР обналичивание. Иные основания</th>
-    <th class="low_tabel">↑</th>
+    <th >3.99</th>
+    <th class="text-center">ПТОВР обналичивание. Иные основания</th>
+    <th >↑</th>
    </tr>
-   <tr>
+   <tr class="table-warning border-info">
     <th>4</th>
-    <th>Подозрительные транзитные операции высокого риска (ПТОВР),<br>
+    <th class="text-center">Подозрительные транзитные операции высокого риска (ПТОВР),<br>
     направленные на вывод денежных средств за рубеж</th>
     <th>ЮЛ</th>
    </tr>
    <tr>
-    <th class="low_tabel">4.01</th>
-    <th class="low_tabel">ПТОВР вывод денежных средств за рубеж</th>
-    <th class="low_tabel">↑</th>
+    <th >4.01</th>
+    <th class="text-center">ПТОВР вывод денежных средств за рубеж</th>
+    <th >↑</th>
    </tr>
    <tr>
-   <tr>
+   <tr class="table-warning border-info">
     <th>5</th>
-    <th>Подозрительные транзитные операции высокого риска (ПТОВР) в схемах <br>
+    <th class="text-center">Подозрительные транзитные операции высокого риска (ПТОВР) в схемах <br>
     по продаже наличной выручки</th>
     <th>ЮЛ, ИП</th>
    </tr>
-    <th class="low_tabel">5.01</th>
-    <th class="low_tabel">ПТОВР покупка наличной выручки. ТРП</th>
-    <th class="low_tabel">↑</th>
+   <tr>
+    <th >5.01</th>
+    <th class="text-center">ПТОВР покупка наличной выручки. ТРП</th>
+    <th >↑</th>
    </tr>
    <tr>
-    <th class="low_tabel">5.02</th>
-    <th class="low_tabel">ПТОВР покупка наличной выручки. Платежные агенты</th>
-    <th class="low_tabel">↑</th>
+    <th >5.02</th>
+    <th class="text-center">ПТОВР покупка наличной выручки. Платежные агенты</th>
+    <th >↑</th>
    </tr>
    <tr>
-    <th class="low_tabel">5.03</th>
-    <th class="low_tabel">ПТОВР покупка наличной выручки. Корпоративные карты</th>
-    <th class="low_tabel">↑</th>
+    <th >5.03</th>
+    <th class="text-center">ПТОВР покупка наличной выручки. Корпоративные карты</th>
+    <th >↑</th>
    </tr>
    <tr>
-    <th class="low_tabel">5.04</th>
-    <th class="low_tabel">ПТОВР продажа наличной выручки</th>
-    <th class="low_tabel">↑</th>
+    <th >5.04</th>
+    <th class="text-center">ПТОВР продажа наличной выручки</th>
+    <th >↑</th>
    </tr>
    <tr>
-    <th class="low_tabel">5.99</th>
-    <th class="low_tabel">ПТОВР покупка наличной выручки. Иные основания</th>
-    <th class="low_tabel">↑</th>
+    <th >5.99</th>
+    <th class="text-center">ПТОВР покупка наличной выручки. Иные основания</th>
+    <th >↑</th>
    </tr>
-   <tr>
+   <tr class="table-warning border-info">
     <th>6</th>
-    <th>Подозрительные операции, направленные на вывод денежных средств в<br>
+    <th class="text-center">Подозрительные операции, направленные на вывод денежных средств в<br>
     теневой оборот (миксующие клиенты)</th>
     <th>ЮЛ</th>
    </tr>
    <tr>
-    <th class="low_tabel">6.01</th>
-    <th class="low_tabel">Подрядчик >50%</th>
-    <th class="low_tabel">↑</th>
+    <th >6.01</th>
+    <th class="text-center">Подрядчик >50%</th>
+    <th >↑</th>
    </tr>
    <tr>
-    <th class="low_tabel">6.02</th>
-    <th class="low_tabel">Подрядчик >30% <=50%</th>
-    <th class="low_tabel">↑</th>
+    <th >6.02</th>
+    <th class="text-center">Подрядчик >30% <=50%</th>
+    <th >↑</th>
    </tr>
    <tr>
-    <th class="low_tabel">6.03</th>
-    <th class="low_tabel">Подрядчик <=30%</th>
-    <th class="low_tabel">↑</th>
+    <th >6.03</th>
+    <th class="text-center">Подрядчик <=30%</th>
+    <th >↑</th>
    </tr>
-   <tr>
+   <tr class="table-warning border-info">
     <th>7</th>
-    <th>Подозрительные транзитные операции высокого риска (ПТОВР), связанные<br>
+    <th class="text-center">Подозрительные транзитные операции высокого риска (ПТОВР), связанные<br>
     с оптимизацией налогообложнения</th>
     <th>ЮЛ</th>
    </tr>
    <tr>
-    <th class="low_tabel">7.01</th>
-    <th class="low_tabel">ПТОВР оптимизация налогообложения. Драгоценные металлы</th>
-    <th class="low_tabel">↑</th>
+    <th >7.01</th>
+    <th class="text-center">ПТОВР оптимизация налогообложения. Драгоценные металлы</th>
+    <th >↑</th>
    </tr>
    <tr>
-    <th class="low_tabel">7.02</th>
-    <th class="low_tabel">ПТОВР оптимизация налогообложения. Металлолом</th>
-    <th class="low_tabel">↑</th>
+    <th >7.02</th>
+    <th class="text-center">ПТОВР оптимизация налогообложения. Металлолом</th>
+    <th >↑</th>
    </tr>
    <tr>
-    <th class="low_tabel">7.99</th>
-    <th class="low_tabel">ПТОВР оптимизация налогообложения. Иные основания</th>
-    <th class="low_tabel">↑</th>
+    <th >7.99</th>
+    <th class="text-center">ПТОВР оптимизация налогообложения. Иные основания</th>
+    <th >↑</th>
    </tr>
-   <tr>
+   <tr class="table-warning border-info">
     <th>8</th>
-    <th>Подозрительные операции, за исключением операций из иных разделов<br>
+    <th class="text-center">Подозрительные операции, за исключением операций из иных разделов<br>
     настоящего перечня</th>
     <th>ЮЛ, ИП</th>
    </tr>
    <tr>
-    <th class="low_tabel">8.01</th>
-    <th class="low_tabel">Сомнительные транзитные операции</th>
-    <th class="low_tabel">↑</th>
+    <th >8.01</th>
+    <th class="text-center">Сомнительные транзитные операции</th>
+    <th >↑</th>
    </tr>
    <tr>
-    <th class="low_tabel">8.02</th>
-    <th class="low_tabel">Вывод денежных средств в теневой оборот</th>
-    <th class="low_tabel">↑</th>
+    <th >8.02</th>
+    <th class="text-center">Вывод денежных средств в теневой оборот</th>
+    <th >↑</th>
    </tr>
    <tr>
-    <th class="low_tabel">8.99</th>
-    <th class="low_tabel">Иные основания</th>
-    <th class="low_tabel">↑</th>
+    <th >8.99</th>
+    <th class="text-center">Иные основания</th>
+    <th >↑</th>
    </tr>
-   <tr>
+   <tr class="table-warning border-info">
     <th>9</th>
-    <th>Подозрительные операции по счетам индивидуальных предпринимателей</th>
+    <th class="text-center">Подозрительные операции по счетам индивидуальных предпринимателей</th>
     <th>ИП</th>
    </tr>
    <tr>
-    <th class="low_tabel">9.01</th>
-    <th class="low_tabel">ПТОВР обналичивание. Схема ЮЛ-ИП-ФЛ</th>
-    <th class="low_tabel">↑</th>
+    <th >9.01</th>
+    <th class="text-center">ПТОВР обналичивание. Схема ЮЛ-ИП-ФЛ</th>
+    <th >↑</th>
    </tr>
    <tr>
-    <th class="low_tabel">9.99</th>
-    <th class="low_tabel">Иные основания</th>
-    <th class="low_tabel">↑</th>
+    <th >9.99</th>
+    <th class="text-center">Иные основания</th>
+    <th >↑</th>
    </tr>
-   <tr>
+   <tr class="table-warning border-info">
     <th>10</th>
-    <th>Иные признаки высокого риска</th>
+    <th class="text-center">Иные признаки высокого риска</th>
     <th>ЮЛ, ИП</th>
    </tr>
    <tr>
-    <th class="low_tabel">10.01</th>
-    <th class="low_tabel">Высокий риск вовлечения клиентов в проведение<br>
+    <th >10.01</th>
+    <th class="text-center">Высокий риск вовлечения клиентов в проведение<br>
         подозрительных операций</th>
-    <th class="low_tabel">↑</th>
+    <th >↑</th>
    </tr>
    <tr>
-    <th class="low_tabel">10.02</th>
-    <th class="low_tabel">Признаки нелегальной деятельности на<br>
+    <th >10.02</th>
+    <th class="text-center">Признаки нелегальной деятельности на<br>
     финансовом рынке</th>
-    <th class="low_tabel">↑</th>
+    <th >↑</th>
    </tr>
    <tr>
-    <th class="low_tabel">10.99</th>
-    <th class="low_tabel">Иные признаки</th>
-    <th class="low_tabel">↑</th>
+    <th >10.99</th>
+    <th class="text-center">Иные признаки</th>
+    <th >↑</th>
    </tr>
 </table>
+</div>
 {% endblock %}
